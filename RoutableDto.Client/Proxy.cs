@@ -10,7 +10,7 @@ namespace RoutableDto.Client
 {
     public class Proxy<TRequest, TResponse> : IRoutableDtoHandler<TRequest, TResponse> where TRequest: IRoutableDto<TResponse>
     {
-        HttpClient httpClient = new HttpClient();
+        private readonly HttpClient httpClient = new HttpClient();
         private static readonly RouteConfig routeConfig;
 
         static Proxy()

@@ -17,8 +17,8 @@ namespace TestConsole
             var proxy = di.GetInstance<IRoutableDtoHandler<LongRunningDto, LongRunningDtoResponse>>();
             try
             {
-                var r = proxy.HandleAsync(new LongRunningDto { Name = "my name is" });
-                Console.WriteLine(r.Result.Echo);
+                var r = proxy.HandleAsync(new LongRunningDto { Name = "Bob" });
+                Console.WriteLine($"Echo: {r.Result.Echo}");
             }
             catch (Exception e)
             {
@@ -31,13 +31,14 @@ namespace TestConsole
             {
                 var r = commandProxy.HandleAsync(new SampleCommandDto
                 {
-                    Name = "my name is",
+                    Name = "my name",
                     Options = new List<CommandOption>
                     {
                         new CommandOption{Name = "Option1", Description = "some option description"},
                         new CommandOption{Name = "Option2"}
                     }
-                });
+                }).Result;
+
                 Console.WriteLine("Command accepted");
             }
             catch (Exception e)
