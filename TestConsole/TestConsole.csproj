@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RoutableDto.Client\RoutableDto.Client.csproj" />
+    <ProjectReference Include="..\RoutableDto.Interfaces\RoutableDto.Interfaces.csproj" />
+    <ProjectReference Include="..\RoutableDto.Public\RoutableDto.Public.csproj" />
+  </ItemGroup>
+
+</Project>

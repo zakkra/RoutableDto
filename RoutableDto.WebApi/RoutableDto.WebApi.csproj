@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Scrutor" Version="2.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RoutableDto.Extensions\RoutableDto.Extensions.csproj" />
+    <ProjectReference Include="..\RoutableDto.Handlers\RoutableDto.Handlers.csproj" />
+    <ProjectReference Include="..\RoutableDto.Interfaces\RoutableDto.Interfaces.csproj" />
+    <ProjectReference Include="..\RoutableDto.Public\RoutableDto.Public.csproj" />
+  </ItemGroup>
+
+</Project>
