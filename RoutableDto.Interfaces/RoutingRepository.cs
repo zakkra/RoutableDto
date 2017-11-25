@@ -24,6 +24,8 @@ namespace RoutableDto.Interfaces
             dict.Add(path.ToLowerInvariant(),routeConfig);
         }
 
+        public IEnumerable<(string Path, RouteConfig RouteConfig)> Routes => dict.Select(x =>(x.Key, x.Value));
+
         public bool PathSupported(string path)
         {
             return dict.ContainsKey(path.ToLowerInvariant());
